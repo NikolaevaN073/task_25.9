@@ -1,0 +1,18 @@
+DirectoryIndex index.html index.php
+
+<IfModule mod_deflate.c>
+	# Compress HTML, CSS, JavaScript, Text, XML, fonts
+	AddOutputFilterByType DEFLATE application/javascript application/x-javascript text/javascript application/json
+	AddOutputFilterByType DEFLATE application/x-font application/x-font-opentype application/x-font-otf application/x-font-truetype application/x-font-ttf font/opentype font/otf font/ttf application/x-woff application/x-font-woff
+	AddOutputFilterByType DEFLATE text/css text/html text/plain
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^init.php$ - [F,L,NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+
+</IfModule>
