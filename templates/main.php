@@ -9,7 +9,7 @@
         <div class="position-absolute m-5">
             <h2 class="pl-5 pt-5 display-1 text-dark">Галерея изображений</h2>
             <?php if (isset($_COOKIE['user_id'])): ?>
-            <a class="btn btn-dark m-5" href="index.php?url=add"> Добавить изображение</a>
+            <a class="btn btn-dark m-5" href="index.php?url=add_files"> Добавить изображение</a>
             <?php endif ?>
         </div>   
         <img src="./public_html/img/img1.jpg" class="img-fluid" alt="">    
